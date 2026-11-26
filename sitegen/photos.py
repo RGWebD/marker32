@@ -10,7 +10,7 @@ def save(src,name,w,crop=None,q=78):
 P={}
 P['hero']=save('Marker32October2021-228-scaled.jpg','hero',2000,q=74)
 P['hero-m']=save('Marker32October2021-228-scaled.jpg','hero-m',900,crop=(0.08,0,0.62,1),q=74)
-P['owners']=save('groshells-1_367-1.jpg','owners',367,q=85)
+P['owners']=save('groshells-1_367-1.jpg','owners',367,crop=(0,0.36,1,1),q=85)
 P['dinner']=save('Marker32August2021-156-scaled.jpg','dinner',1100)
 P['brunch']=save('MarkerBrunchNov2023-9-scaled.jpg','brunch',900)
 P['bar']=save('Marker32Jan2024-219-scaled.jpg','bar',1100,crop=(0.1,0,0.9,1))

@@ -88,7 +88,7 @@ def index():
  <div class="hero-shade"></div>
  <div class="hero-in">
   <img class="hero-logo" src="img/logo-white.webp" alt="Marker 32" width="900" height="293">
-  <h1 class="hero-h1">Waterfront seafood · Jacksonville, Florida · Since 1992</h1>
+  <h1 class="hero-h1"><span>Waterfront seafood</span><span class="hs" aria-hidden="true"> · </span><span>Jacksonville, Florida</span><span class="hs" aria-hidden="true"> · </span><span>Since 1992</span></h1>
   <div class="hero-cta"><a class="btn btn-light" href="{RESY}" target="_blank" rel="noopener">Reserve a table</a><a class="hero-tel" href="tel:{TEL}">or call {PHONE}</a></div>
  </div>
  <p class="hero-meta"><span id="status" class="status">Mon–Sat 5–10 PM · Sun brunch & dinner</span><span class="sep" aria-hidden="true">·</span><a href="{MAPS}" target="_blank" rel="noopener">{ADDR1}</a></p>
@@ -103,7 +103,7 @@ def index():
    <p>Over thirty years later it is still family owned. Sauces, stocks, soups and bread are made from scratch every day, with local seafood and produce.</p>
   </div>
   <figure class="about-q rv">
-   <img class="disc" src="img/owners.webp" alt="Ben and Liza Groshell, owners of Marker 32" width="367" height="392" loading="lazy">
+   <img class="disc" src="img/owners.webp" alt="Ben and Liza Groshell, owners of Marker 32" width="367" height="251" loading="lazy">
    <blockquote>“I enjoy the back of the house with all the chefs. The camaraderie with those guys, having walked in their shoes, I can see what they need.”</blockquote>
    <figcaption>Ben Groshell, chef and proprietor, to <a href="https://arbus.com/the-milestone-at-marker-32/" target="_blank" rel="noopener">Arbus Magazine</a>, 2023</figcaption>
   </figure>
