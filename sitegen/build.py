@@ -32,12 +32,13 @@ def header(home=True):
     return f'''<a class="skip" href="#main">Skip to content</a>
 <header class="hd{' solid' if not home else ''}" id="hd"><div class="hd-in">
 <a class="hd-logo" href="{p or '#top'}" aria-label="Marker 32 home"><img class="lw" src="img/logo-white.webp" alt="Marker 32" width="900" height="293"><img class="lb" src="img/logo-blue.webp" alt="" aria-hidden="true" width="900" height="293"></a>
-<nav class="hd-nav" aria-label="Main"><a href="{p}#story">Story</a><a href="{p}#dining">Dining</a><a href="menu.html">Menu</a><a href="{p}#private">Private Dining</a><a href="{p}#visit">Visit</a></nav>
+<nav class="hd-nav" aria-label="Main"><a href="{p}#story">Story</a><a href="{p}#dining">Dining</a><a class="nav-menu" href="menu.html"{'' if home else ' aria-current="page"'}>Menu</a><a href="{p}#private">Private Dining</a><a href="{p}#visit">Visit</a></nav>
 <div class="hd-cta"><a class="hd-tel" href="tel:{TEL}">{PHONE}</a><a class="btn btn-sm" href="{RESY}" target="_blank" rel="noopener">Reserve</a></div>
 </div></header>'''
 
-def mbar():
-    return f'''<nav class="mbar" id="mbar" aria-label="Quick actions"><a href="tel:{TEL}">Call</a><a href="menu.html">Menu</a><a class="mb-res" href="{RESY}" target="_blank" rel="noopener">Reserve</a></nav>
+def mbar(home=True):
+    mid = '<a href="menu.html">Menu</a>' if home else '<a href="index.html">Home</a>'
+    return f'''<nav class="mbar" id="mbar" aria-label="Quick actions"><a href="tel:{TEL}">Call</a>{mid}<a class="mb-res" href="{RESY}" target="_blank" rel="noopener">Reserve</a></nav>
 <div class="demo" id="demo">Design preview by RGWebD <button type="button" aria-label="Dismiss design preview note" onclick="this.parentNode.remove()">×</button></div>'''
 
 def hours_rows():
@@ -212,13 +213,14 @@ def menu_page():
  <header class="mn-hd"><p class="eyebrow">Marker 32 · Jacksonville</p><h1 class="h1">Menu</h1>
  <p class="lead">Made from scratch daily, with local seafood and produce. The menu follows the season and the nightly seafood special is market price, so call <a href="tel:{TEL}">{PHONE}</a> for tonight’s offerings.</p>
  <div class="row-cta"><a class="btn" href="{RESY}" target="_blank" rel="noopener">Reserve on Resy</a></div></header>
+ <div id="mn-start" aria-hidden="true"></div>
  <div class="mn-tools"><div class="chips" role="group" aria-label="Filter menu">{chips}</div>
  <label class="mn-search"><span class="vh">Search the menu</span><input id="q" type="search" placeholder="Search: oysters, crab, gluten free…" autocomplete="off"></label></div>
  <p class="mn-empty" id="empty" hidden>Nothing matches that search. Try “shrimp” or “oyster”.</p>
  {''.join(sec(s,t,g) for s,t,g in [('dinner','Dinner',DINNER),('brunch','Sunday Brunch · 10:30 AM–2:30 PM',BRUNCH),('cocktails','Cocktails',COCKTAILS)])}
  <p class="mn-note">Prices as published on marker32.com in November 2026 and subject to change. (GF) gluten free. *Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk of foodborne illness, especially if you have medical conditions. Wine and beer lists are available at the restaurant.</p>
 </main>
-{footer()}{mbar()}
+{footer()}{mbar(False)}
 <script src="site.js" defer></script></body></html>'''
     return h + body
 

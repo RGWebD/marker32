@@ -45,8 +45,16 @@ document.documentElement.classList.add('js');
      g.hidden=!gAny;if(gAny)secAny=true;});
     sec.hidden=!(showSec&&secAny);if(!sec.hidden)any=true;});
    document.getElementById('empty').hidden=any;}
-  chips.forEach(function(c){c.addEventListener('click',function(){cur=c.dataset.f;chips.forEach(function(x){x.setAttribute('aria-pressed',x===c?'true':'false')});apply();})});
-  if(q)q.addEventListener('input',apply);
-  var h=location.hash.slice(1);if(['dinner','brunch','cocktails'].indexOf(h)>=0){/* keep all visible; anchor scrolls */}
+  // keep the results in view: if the reader is scrolled below the top of the menu, jump back to it after filtering
+  var start=document.getElementById('mn-start');
+  function jump(){var hdH=(hd?hd.offsetHeight:0),y=Math.max(0,start.getBoundingClientRect().top+window.scrollY-hdH-8);if(window.scrollY>y+4)window.scrollTo(0,y);}
+  function toTop(){if(!start)return;jump();requestAnimationFrame(jump);setTimeout(jump,60);}
+  chips.forEach(function(c){c.addEventListener('click',function(){cur=c.dataset.f;chips.forEach(function(x){x.setAttribute('aria-pressed',x===c?'true':'false')});apply();toTop();})});
+  if(q)q.addEventListener('input',function(){apply();toTop();});
+  // web fonts can swap in after the browser jumps to #dinner/#brunch/#cocktails; land on the section again once they are ready
+  var h=location.hash.slice(1),tgt=h&&document.getElementById(h);
+  if(tgt&&document.fonts&&document.fonts.ready){var moved=false,mark=function(){moved=true};window.addEventListener('wheel',mark,{once:true,passive:true});window.addEventListener('touchstart',mark,{once:true,passive:true});
+   var land=function(){if(!moved)tgt.scrollIntoView();};
+   window.addEventListener('load',function(){document.fonts.ready.then(function(){land();setTimeout(land,700);});});}
  }
 })();
