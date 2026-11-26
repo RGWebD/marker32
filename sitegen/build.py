@@ -25,7 +25,7 @@ def head(title, desc, path, extra=''):
 <meta property="og:type" content="restaurant.restaurant"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}img/og.jpg">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(title)}"><meta name="twitter:description" content="{e(desc)}"><meta name="twitter:image" content="{BASE}img/og.jpg">
 <meta name="theme-color" content="#14233a"><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="img/icon-32.png"><link rel="apple-touch-icon" href="img/icon-180.png">
-{FONTS}<link rel="stylesheet" href="style.css">{extra}</head>'''
+{FONTS}<link rel="stylesheet" href="style.css?v=5">{extra}</head>'''
 
 def header(home=True):
     p = '' if home else 'index.html'
@@ -184,7 +184,7 @@ def index():
 </section>
 </main>
 {footer()}{mbar()}
-<script src="site.js" defer></script></body></html>'''
+<script src="site.js?v=5" defer></script></body></html>'''
     return h + body
 
 def menu_page():
@@ -221,12 +221,12 @@ def menu_page():
  <p class="mn-note">Prices as published on marker32.com in November 2026 and subject to change. (GF) gluten free. *Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk of foodborne illness, especially if you have medical conditions. Wine and beer lists are available at the restaurant.</p>
 </main>
 {footer()}{mbar(False)}
-<script src="site.js" defer></script></body></html>'''
+<script src="site.js?v=5" defer></script></body></html>'''
     return h + body
 
 def page404():
     h = head(f'Page not found | {NAME}', 'This page could not be found. Return to Marker 32, waterfront seafood in Jacksonville, FL.', '404.html')
-    h = h.replace('href="style.css"','href="/marker32/style.css"').replace('href="favicon.ico"','href="/marker32/favicon.ico"').replace('href="img/','href="/marker32/img/')
+    h = h.replace('href="style.css?v=5"','href="/marker32/style.css"').replace('href="favicon.ico"','href="/marker32/favicon.ico"').replace('href="img/','href="/marker32/img/')
     return h + f'''<body class="pg-404"><main id="main" class="nf"><img src="/marker32/img/logo-blue.webp" alt="Marker 32" width="900" height="293"><h1 class="h1">Off the channel.</h1><p class="lead">This page drifted away. The marina is right where we left it.</p><div class="row-cta center"><a class="btn" href="/marker32/">Back to Marker 32</a><a class="btn btn-ghost" href="{RESY}">Reserve on Resy</a></div></main></body></html>'''
 
 def misc():
