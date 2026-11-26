@@ -95,7 +95,7 @@ p a:not(.btn),.small a,figcaption a,.creds a{text-decoration:underline;text-deco
 .fmt-c{min-width:0}
 .fmt-c img{width:100%;aspect-ratio:4/5;object-fit:cover;margin-bottom:28px}
 .fmt-c h3{font:400 34px/1.1 var(--serif);margin:0 0 8px}
-.fmt-when{font:600 12px/1.6 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin:0 0 14px}
+.fmt-when{font:600 13px/1.6 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin:0 0 14px}
 .fmt-c p{margin:0 0 20px}
 /* creds */
 .creds{padding:56px 0;border-bottom:1px solid var(--line)}
@@ -142,7 +142,7 @@ p a:not(.btn),.small a,figcaption a,.creds a{text-decoration:underline;text-deco
 .ft-h{font:600 12px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:#a9b1bf;margin:6px 0 18px}
 .ft a{text-decoration:none}.ft a:hover{text-decoration:underline}
 .ft .btn-light{margin-top:10px;color:var(--ink)}
-.ft-sm{font-size:14px;color:#a9b1bf}
+.ft-sm{font-size:15px;color:#a9b1bf}
 .ft-legal{max-width:1180px;margin:60px auto 0;padding:24px 24px 0;border-top:1px solid rgba(255,255,255,.12);font-size:13px;color:#8f99a9}
 /* mobile bar + demo */
 .mbar{display:none}
