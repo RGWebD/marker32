@@ -1,0 +1,14 @@
+# Marker 32
+> Family-owned fine-dining seafood restaurant on the Intracoastal Waterway in Jacksonville, Florida, open since July 1992. Second-floor dining room overlooking the marina. Owned by Ben Groshell (chef and proprietor, Culinary Institute of America 1989) and Liza Groshell, part of Southern Table Hospitality.
+
+- Address: 14549 Beach Blvd, Jacksonville, FL 32250 (Beach Blvd at San Pablo Rd S)
+- Phone: (904) 223-1534
+- Hours: Monday–Saturday 5–10 PM; Sunday brunch 10:30 AM–2:30 PM; Sunday dinner 5–9 PM
+- Reservations: Resy, https://resy.com/cities/jacksonville-fl/venues/marker-32 (online up to 8 guests; 15-minute grace period)
+- Private events (12+ guests): Laura Hayes, Director of Events and Catering, (904) 654-9877, laura@southerntablehospitality.com
+- Google rating: 4.6 from 1,697 reviews (November 2026)
+- Cuisine: seafood, New American; made from scratch daily with local seafood and produce
+
+## Pages
+- [Home](https://rgwebd.github.io/marker32/): story, dining formats, private dining, reservations, hours and location
+- [Menu](https://rgwebd.github.io/marker32/menu.html): dinner, Sunday brunch and cocktail menus
